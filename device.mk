@@ -35,6 +35,10 @@ $(call inherit-product, device/lge/gee-common/gee-common.mk)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.debuggable=1 \
     persist.service.adb.enable=1
+
+# Do not power down SIM card when modem is sent to Low Power Mode.
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.radio.apm_sim_not_pwdn=1
     
 # PRODUCT_CHARACTERISTICS := nosdcard  
 
