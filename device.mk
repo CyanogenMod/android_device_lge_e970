@@ -20,13 +20,13 @@
 # Everything in this directory will become public
 
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/lge/geehrc_sp/geehrc-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/geeb_att/geeb-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/geehrc4g_spr_us/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_att_us/overlay
 
 ## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay-cdma
+DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay-gsm
 
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
@@ -40,12 +40,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/lge/geehrc4g_spr_us/ramdisk/init.geehrc.rc:root/init.geehrc.rc \
-    device/lge/geehrc4g_spr_us/ramdisk/ueventd.geehrc.rc:root/ueventd.geehrc.rc \
-    device/lge/geehrc4g_spr_us/ramdisk/fstab.geehrc:root/fstab.geehrc
+    device/lge/geeb_att_us/ramdisk/init.geeb.rc:root/init.geeb.rc \
+    device/lge/geeb_att_us/ramdisk/ueventd.geeb.rc:root/ueventd.geeb.rc \
+    device/lge/geeb_att_us/ramdisk/fstab.geeb:root/fstab.geeb
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-   frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml
+   frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-PRODUCT_PACKAGES += camera.geehrc
+PRODUCT_PACKAGES += camera.geeb

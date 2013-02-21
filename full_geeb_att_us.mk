@@ -23,12 +23,12 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_DEVICE := geehrc4g
-PRODUCT_NAME := full_geehrc4g_spr_us
+PRODUCT_DEVICE := geeb
+PRODUCT_NAME := full_geeb_att_us
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-LS970
+PRODUCT_MODEL := LG-E970
 PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/lge/geehrc4g_spr_us/geehrc4g_spr_us.mk)
+$(call inherit-product, device/lge/geeb_att_us/geeb_att_us.mk)
