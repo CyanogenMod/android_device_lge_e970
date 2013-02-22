@@ -46,7 +46,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     device/lge/geeb_att_us/ramdisk/init.geeb.rc:root/init.geeb.rc \
     device/lge/geeb_att_us/ramdisk/ueventd.geeb.rc:root/ueventd.geeb.rc \
-    device/lge/geeb_att_us/ramdisk/fstab.geeb:root/fstab.geeb
+    device/lge/geeb_att_us/ramdisk/fstab.gee:root/fstab.gee
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
