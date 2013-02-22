@@ -32,7 +32,7 @@
              android:primary="false"
              android:removable="true"
              android:allowMassStorage="true"
-             android:maxFileSize="4096"
+             android:maxFileSize="4096" />
     <!-- USB otg -->
     <storage android:mountPoint="/storage/usbdisk0"
              android:storageDescription="@string/storage_usb"
