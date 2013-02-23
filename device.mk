@@ -28,6 +28,9 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_att_us/overlay
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay-gsm
 
+PRODUCT_PACKAGES := \
+    lights.geeb
+
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
 
