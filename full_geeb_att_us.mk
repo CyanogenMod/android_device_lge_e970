@@ -31,4 +31,4 @@ PRODUCT_MANUFACTURER := LGE
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/lge/geeb_att_us/geeb_att_us.mk)
+$(call inherit-product, device/lge/geeb_att_us/device.mk)

@@ -39,6 +39,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Do not power down SIM card when modem is sent to Low Power Mode.
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+        rild.libpath=/system/lib/libril-qc-qmi-1.so
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        telephony.lteOnCdmaDevice=0
     
 # PRODUCT_CHARACTERISTICS := nosdcard  
 
