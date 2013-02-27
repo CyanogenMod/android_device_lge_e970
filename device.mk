@@ -28,9 +28,6 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_att_us/overlay
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay-gsm
 
-PRODUCT_PACKAGES := \
-    lights.geeb
-
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
 
@@ -43,16 +40,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.apm_sim_not_pwdn=1
 
+# QC RIL path for rild
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
         rild.libpath=/system/lib/libril-qc-qmi-1.so
 
+# Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
         telephony.lteOnCdmaDevice=0 \
         telephony.lteOnGsmDevice=1 \
         ro.telephony.default_network=9 \
         ro.ril.def.preferred.network=9
     
-# PRODUCT_CHARACTERISTICS := nosdcard  
+# Vold configuration
+PRODUCT_COPY_FILES += \
+    device/lge/geeb_att_us/vold.fstab:system/etc/vold.fstab
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -64,4 +65,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+# CameraHAL
 PRODUCT_PACKAGES += camera.geeb
