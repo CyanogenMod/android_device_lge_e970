@@ -12,3 +12,4 @@
 /rpm	    emmc	/dev/block/platform/msm_sdcc.1/by-name/rpm
 /aboot	    emmc	/dev/block/platform/msm_sdcc.1/by-name/aboot
 /sdcard            datamedia   /dev/null
+/external_sd	vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1
