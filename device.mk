@@ -42,15 +42,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QC RIL path for rild
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-        rild.libpath=/system/lib/libril-qc-qmi-1.so
+    rild.libpath=/system/lib/libril-qc-qmi-1.so
 
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-        telephony.lteOnCdmaDevice=0 \
-        telephony.lteOnGsmDevice=1 \
-        ro.telephony.default_network=9 \
-        ro.ril.def.preferred.network=9
-    
+    telephony.lteOnCdmaDevice=0 \
+    telephony.lteOnGsmDevice=1 \
+    ro.telephony.default_network=9 \
+    ro.ril.def.preferred.network=9
+
+# About Phone / Hardware Info
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.device.chipset=Qualcomm Snapdragon S4 Pro APQ8064 + MDM9615 \
+    ro.device.cpu=1.5 GHz quad-core Krait \
+    ro.device.gpu=Qualcomm Adreno 320 \
+    ro.device.rear_cam=8 MP \
+    ro.device.front_cam=1.3 MP \
+    ro.device.screen_res=768x1280
+		
 # Vold configuration
 PRODUCT_COPY_FILES += \
     device/lge/geeb_att_us/vold.fstab:system/etc/vold.fstab
