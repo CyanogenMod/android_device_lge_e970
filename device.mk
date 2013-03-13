@@ -47,10 +47,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9 \
     ro.ril.def.preferred.network=9
 
-# 8 MP in About Phone / Hardware Info
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.device.rear_cam=8 MP 
-
 		# Vold configuration
 PRODUCT_COPY_FILES += \
     device/lge/geeb_att_us/vold.fstab:system/etc/vold.fstab
