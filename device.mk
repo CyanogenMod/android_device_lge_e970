@@ -53,8 +53,8 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_att_us/ramdisk/init.geeb.rc:root/init.geeb.rc \
-    device/lge/geeb_att_us/ramdisk/ueventd.geeb.rc:root/ueventd.geeb.rc \
+    device/lge/geeb_att_us/ramdisk/init.geeb_att_us.rc:root/init.geeb_att_us.rc \
+    device/lge/geeb_att_us/ramdisk/ueventd.geeb_att_us.rc:root/ueventd.geeb_att_us.rc \
     device/lge/geeb_att_us/ramdisk/fstab.gee:root/fstab.gee
 
 # These are the hardware-specific features
@@ -62,4 +62,5 @@ PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
 # CameraHAL
-PRODUCT_PACKAGES += camera.geeb
+PRODUCT_PACKAGES += \
+   camera.geeb_att_us

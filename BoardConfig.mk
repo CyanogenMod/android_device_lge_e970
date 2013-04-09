@@ -14,13 +14,16 @@
 # limitations under the License.
 #
 
-BOARD_KERNEL_CMDLINE := console=ttySHL0,115200,n8 androidboot.hardware=geeb lpj=67677
+BOARD_KERNEL_CMDLINE := console=ttySHL0,115200,n8 androidboot.hardware=geeb_att_us lpj=67677
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
-TARGET_KERNEL_CONFIG := j1a-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/gee
+#TARGET_KERNEL_CONFIG := j1a-perf_defconfig
+#TARGET_KERNEL_SOURCE := kernel/lge/gee
+
+TARGET_KERNEL_CONFIG := geebca_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/geem
 
 # inherit from gee-common
 -include device/lge/gee-common/BoardConfigCommon.mk
