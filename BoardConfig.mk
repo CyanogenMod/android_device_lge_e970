@@ -35,4 +35,4 @@ TARGET_OTA_ASSERT_DEVICE := geebus,geebusc,geeb_att,geeb,gee_sp,geeb_att_us,e970
 TARGET_BOARD_INFO_FILE := device/lge/geeb_att_us/board-info.txt
 
 # inherit from the proprietary version
--include vendor/lge/geeb_att/BoardConfigVendor.mk
+-include vendor/lge/gee/BoardConfigVendor.mk
