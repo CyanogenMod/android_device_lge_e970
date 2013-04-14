@@ -26,7 +26,7 @@ $(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_att_us/overlay
 
 ## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay-gsm
+DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay
 
 # Inherit from gee-common
 $(call inherit-product, device/lge/gee-common/gee-common.mk)
@@ -47,9 +47,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=9 \
     ro.ril.def.preferred.network=9
 
-		# Vold configuration
+# Vold configuration
 PRODUCT_COPY_FILES += \
     device/lge/geeb_att_us/vold.fstab:system/etc/vold.fstab
+
+# GPS configuration
+PRODUCT_COPY_FILES += \
+        device/lge/geeb_att_us/configs/gps.conf:system/etc/gps.conf
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
