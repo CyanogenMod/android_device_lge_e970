@@ -61,6 +61,10 @@ PRODUCT_COPY_FILES += \
     device/lge/geeb_att_us/ramdisk/ueventd.geeb_att_us.rc:root/ueventd.geeb_att_us.rc \
     device/lge/geeb_att_us/ramdisk/fstab.gee:root/fstab.gee
 
+# NFC Firmware
+PRODUCT_COPY_FILES += \
+    device/lge/geeb_att_us/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
