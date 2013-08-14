@@ -14,25 +14,22 @@
 # limitations under the License.
 #
 
-BOARD_KERNEL_CMDLINE := console=ttySHL0,115200,n8 androidboot.hardware=geeb_att_us lpj=67677
+BOARD_KERNEL_CMDLINE := console=ttySHL0,115200,n8 androidboot.hardware=e970 lpj=67677
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
-#TARGET_KERNEL_CONFIG := j1a-perf_defconfig
-#TARGET_KERNEL_SOURCE := kernel/lge/gee
+TARGET_KERNEL_CONFIG := cyanogenmod_e973_defconfig
+TARGET_KERNEL_SOURCE := kernel/lge/ls970
 
-TARGET_KERNEL_CONFIG := geebca_defconfig
-TARGET_KERNEL_SOURCE := kernel/lge/geem
-
-# inherit from gee-common
--include device/lge/gee-common/BoardConfigCommon.mk
+# inherit from ls970-common
+-include device/lge/ls970-common/BoardConfigCommon.mk
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := geebus,geebusc,geeb_att,geeb,gee_sp,geeb_att_us,e970,geeb_att_us,jeebus,jeebusc
+TARGET_OTA_ASSERT_DEVICE := geebus,geebusc,geeb_att,geeb,geeb_att_us,e970,geeb_att_us,jeebus,jeebusc
 
 # board-info
-TARGET_BOARD_INFO_FILE := device/lge/geeb_att_us/board-info.txt
+TARGET_BOARD_INFO_FILE := device/lge/e970/board-info.txt
 
 # inherit from the proprietary version
--include vendor/lge/gee/BoardConfigVendor.mk
+-include vendor/lge/ls970/BoardConfigVendor.mk

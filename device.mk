@@ -14,25 +14,20 @@
 # limitations under the License.
 #
 
-# This file includes all definitions that apply to ALL geehrc devices, and
-# are also specific to geehrc devices
-#
-# Everything in this directory will become public
-
 ## (2) Also get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/lge/gee/gee-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/ls970/ls970-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/geeb_att_us/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/e970/overlay
 
 ## common overlays
-DEVICE_PACKAGE_OVERLAYS += device/lge/gee-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/lge/ls970-common/overlay
 
 PRODUCT_PACKAGES := \
-	lights.geeb_att_us
+	lights.e970
 
-# Inherit from gee-common
-$(call inherit-product, device/lge/gee-common/gee-common.mk)
+# Inherit from ls970-common
+$(call inherit-product, device/lge/ls970-common/ls970-common.mk)
 
 # Enable for debugging
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -52,21 +47,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vold configuration
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_att_us/vold.fstab:system/etc/vold.fstab
+    device/lge/e970/vold.fstab:system/etc/vold.fstab
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-        device/lge/geeb_att_us/configs/gps.conf:system/etc/gps.conf
+        device/lge/e970/configs/gps.conf:system/etc/gps.conf
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_att_us/ramdisk/init.geeb_att_us.rc:root/init.geeb_att_us.rc \
-    device/lge/geeb_att_us/ramdisk/ueventd.geeb_att_us.rc:root/ueventd.geeb_att_us.rc \
-    device/lge/geeb_att_us/ramdisk/fstab.gee:root/fstab.gee
+    device/lge/e970/ramdisk/init.e970.rc:root/init.e970.rc \
+    device/lge/e970/ramdisk/ueventd.e970.rc:root/ueventd.e970.rc \
+    device/lge/e970/ramdisk/fstab.e970:root/fstab.e970
 
 # NFC Firmware
 PRODUCT_COPY_FILES += \
-    device/lge/geeb_att_us/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+    device/lge/e970/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -74,4 +69,4 @@ PRODUCT_COPY_FILES += \
 
 # CameraHAL
 PRODUCT_PACKAGES += \
-   camera.geeb_att_us
+   camera.e970

@@ -1,4 +1,9 @@
-import init.gee.rc
+import init.ls970-common.rc
+
+on fs
+    # mount ALL THE THINGS
+    mount_all ./fstab.e970
+    setprop ro.crypto.fuse_sdcard true
 
 on init
     mkdir /mnt/shell/emulated 0700 shell shell
