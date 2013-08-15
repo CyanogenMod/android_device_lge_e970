@@ -23,9 +23,6 @@ DEVICE_PACKAGE_OVERLAYS += device/lge/e970/overlay
 ## common overlays
 DEVICE_PACKAGE_OVERLAYS += device/lge/ls970-common/overlay
 
-PRODUCT_PACKAGES := \
-	lights.e970
-
 # Inherit from ls970-common
 $(call inherit-product, device/lge/ls970-common/ls970-common.mk)
 
