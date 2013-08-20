@@ -58,7 +58,7 @@ PRODUCT_COPY_FILES += \
 
 # NFC Firmware
 PRODUCT_COPY_FILES += \
-    device/lge/e970/prebuilt/libpn544_fw.so:system/vendor/firmware/libpn544_fw.so \
+    device/lge/e970/prebuilt/lights.msm8960.so:system/lib/hw/lights.msm8960.so
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
