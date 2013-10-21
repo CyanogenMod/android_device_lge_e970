@@ -31,20 +31,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.debuggable=1 \
     persist.service.adb.enable=1
 
-# Do not power down SIM card when modem is sent to Low Power Mode.
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.apm_sim_not_pwdn=1
-
 # Telephony Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    telephony.lteOnCdmaDevice=0 \
-    telephony.lteOnGsmDevice=1 \
-    ro.telephony.default_network=9 \
-    ro.ril.def.preferred.network=9
-
-# GPS configuration
-PRODUCT_COPY_FILES += \
-        device/lge/e970/configs/gps.conf:system/etc/gps.conf
+	telephony.lteOnCdmaDevice=0 \
+	ro.telephony.default_network=9 \
+	telephony.lteOnGsmDevice=1
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
@@ -52,14 +43,6 @@ PRODUCT_COPY_FILES += \
     device/lge/e970/ramdisk/ueventd.e970.rc:root/ueventd.e970.rc \
     device/lge/e970/ramdisk/fstab.e970:root/fstab.e970
 
-# NFC Firmware
-PRODUCT_COPY_FILES += \
-    device/lge/e970/prebuilt/lights.msm8960.so:system/lib/hw/lights.msm8960.so
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
-
-# CameraHAL
-PRODUCT_PACKAGES += \
-   camera.e970
