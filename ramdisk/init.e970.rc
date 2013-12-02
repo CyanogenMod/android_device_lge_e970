@@ -44,3 +44,7 @@ on init
 
     setprop ro.usb.idproduct.mtp 631C
     setprop ro.usb.idproduct.mtp_adb 61F9
+
+service fuse_sdcard /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard /storage/sdcard1
+    class late_start
+    disabled
