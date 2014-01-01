@@ -25,7 +25,7 @@ RECOVERY_FSTAB_VERSION := 2
 -include device/lge/ls970-common/BoardConfigCommon.mk
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := geebus,geebusc,geeb_att,geeb,geeb_att_us,e970,geeb_att_us,jeebus,jeebusc
+TARGET_OTA_ASSERT_DEVICE := geebus,geebusc,geeb_att,geeb,geeb_att_us,e970,jeebus,jeebusc
 
 # board-info
 TARGET_BOARD_INFO_FILE := device/lge/e970/board-info.txt
